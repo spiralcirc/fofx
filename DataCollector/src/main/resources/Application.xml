@@ -4,9 +4,12 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans
 	   					   http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <bean id="message"
-          class="org.springbyexample.di.app.Message">
-        <property name="message" value="Spring is fun." />
+
+    <bean id="mybean"
+          class="sm.fofx.model.TestClass" init-method="doit">
     </bean>
 
+    <beans profile="testprofile">
+        <bean id = "mybean" class = "sm.fofx.model.dummy"/>
+    </beans>
 </beans>

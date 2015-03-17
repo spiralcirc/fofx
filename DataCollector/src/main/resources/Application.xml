@@ -1,15 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
        xsi:schemaLocation="http://www.springframework.org/schema/beans
 	   					   http://www.springframework.org/schema/beans/spring-beans.xsd">
 
+    <context:component-scan base-package="sm.fofx"/>
 
-    <bean id="mybean"
-          class="sm.fofx.model.TestClass" init-method="doit">
-    </bean>
-
-    <beans profile="testprofile">
-        <bean id = "mybean" class = "sm.fofx.model.dummy"/>
-    </beans>
 </beans>
